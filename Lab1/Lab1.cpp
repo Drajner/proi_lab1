@@ -2,10 +2,26 @@
 //
 
 #include <iostream>
+#include "Human.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+#ifdef _DEBUG
+    std::cout << "Compiled in debug mode" << std::endl;
+#endif // _DEBUG
+
+    Human Maciek("Maciek", 20);
+    Maciek.info();
+
+    //Human* NotHuman = nullptr;
+    //NotHuman->info();
+    float k=0.01, j=0.0;
+    while (k > j)
+    {
+        j = k;
+        k += 0.01;
+    }
+    std::cout << k << std::endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
